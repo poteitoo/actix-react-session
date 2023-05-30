@@ -1,0 +1,16 @@
+[package]
+name = "auth-session-1"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = { workspace = true, features = ["openssl"] }
+# actix-web = { workspace = true, features = ["rustls"] }
+actix-cors.workspace = true
+actix-session = { workspace = true, features = ["redis-actor-session"] }
+serde = { workspace = true, features = ["derive"] }
+# serde_json.workspace = true
+
+env_logger.workspace = true
+log.workspace = true
+openssl = "0.10.52"
